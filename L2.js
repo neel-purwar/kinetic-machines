@@ -35,9 +35,9 @@ handleLevelTransition();
 
   if (!showEducationalImage)
   {
-    setFont();
-    text('Position the black bouncy bar to ', width/2, height-65);
-    text('help ball go inside the basket!', width/2, height-40);
+    setFont(18);
+    text('Position the black bouncy bar to ', width/2, height-60);
+    text('help ball go inside the basket!', width/2, height-35);
   }
 
   if (solutionButton.mouse.pressing())

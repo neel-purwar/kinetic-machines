@@ -43,9 +43,9 @@ function playL1()
 
   if (!showEducationalImage)
   {
-    setFont();
-    text('Position the red bar to ', width/2, height-65);
-    text('help ball go inside the basket!', width/2, height-40);
+    setFont(18);
+    text('Position the red bar to ', width/2, height-60);
+    text('help ball go inside the basket!', width/2, height-35);
   }
 
   if (solutionButton.mouse.pressing())
@@ -57,8 +57,8 @@ function playL1()
 
 function drawSolutionL1()
 {  
-    bar.rotation = -20;
-    bar.position.x = 322;
+    bar.rotation = -12.5;
+    bar.position.x = 340;
     bar.position.y = 300;
 }
 

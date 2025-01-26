@@ -35,9 +35,9 @@ function playL5()
 
   if (!showEducationalImage)
   {
-    setFont();
-    text('Lay the dominos and', width/2, height-65);
-    text('help red ball go inside the basket!', width/2, height-40);
+    setFont(18);
+    text('Lay the dominos and', width/2, height-60);
+    text('help red ball go inside the basket!', width/2, height-35);
   }
 
   if (solutionButton.mouse.pressing())
@@ -51,7 +51,7 @@ function playL5()
   for (let i = 0; i < dominos.length; i++)
   {
     dominos[i].position.x = 150 + i*55;
-    dominos[i].y = 155;  
+    dominos[i].y = 159;  
   }
 }
 ////////////////////////////////////////////////////////////////////////

@@ -67,13 +67,12 @@ function preload() {
   successSound = loadSound("assets/success-small.mp3");
   successSound.volume = 0.3;
   introSound = loadSound("assets/cinematic-cut.mp3");
-  ChalkboyFont  = loadFont("assets/Chalkboy.ttf");
+  // ChalkboyFont  = loadFont("assets/Chalkboy.ttf");
 }
 
 ////////////////////////////////////////////////////////////////////////
 function setup() {
-  new Canvas(612,459);
-
+  new Canvas(625,471);
 
   makeMusicNote();   
 
@@ -269,30 +268,30 @@ function displayIntroImages() {
 
 function setFont(size)
 {
-  textFont(ChalkboyFont);
+  textFont("cursive");
   textSize(size);
   textAlign(CENTER);
 }
 function setupButtons() {
 
-  setFont(30);
+  setFont(18);
 
   nextIntroButton = new Sprite(width - 35, height - 15, 65,25, 'k');
-  nextIntroButton.textSize = 20;
+  // nextIntroButton.textSize = 20;
   nextIntroButton.text ="Next";
   nextIntroButton.color = color(255, 255, 255);
   nextIntroButton.stroke = color(255, 255, 255);
 
 
-  previousIntroButton = new Sprite(35, height - 15, 65,25, 'k');
-  previousIntroButton.textSize = 20;
+  previousIntroButton = new Sprite(40, height - 15, 75,25, 'k');
+  // previousIntroButton.textSize = 20;
   previousIntroButton.text ="Previous";
   previousIntroButton.color = color(255, 255, 255);
   previousIntroButton.stroke = color(255, 255, 255);
 
-  skipIntroButton = new Sprite(width - 45, 15, 85, 25, 'k');
-  skipIntroButton.textSize = 20;
-  skipIntroButton.text ="Skip Intro";
+  skipIntroButton = new Sprite(width - 48, 15, 90, 25, 'k');
+  // skipIntroButton.textSize = 20;
+  skipIntroButton.text =" Skip Intro ";
   skipIntroButton.color = color(255, 255, 255, 133);
   skipIntroButton.stroke = color(255, 255, 255);
 
@@ -410,37 +409,33 @@ function makeMusicNote()
 ////////////////////////////////////////////////////////////////////////
 function commonSprites()
 {
-  startButton = new Sprite(40,20, 65,25, 'k');
-  startButton.textSize = 20;
+  setFont(18);
+
+  startButton = new Sprite(40,20, 70,25, 'k');
   startButton.text = "Run";
   //startButton.color = 'white';
   startButton.color = color(255, 255, 255, 200);
   // startButton.strokeWeight = 0;
 
-  homeButton = new Sprite(40, 50, 65,25, 'k');
-  homeButton.textSize = 20;
+  homeButton = new Sprite(40, 50, 70,25, 'k');
   homeButton.text = "Home";
   homeButton.color = color(255, 255, 255, 200);
 
 
-  resetButton = new Sprite(width-40,20, 65, 25, 'k');
-  resetButton.textSize = 20;
+  resetButton = new Sprite(width-40,20, 70, 25, 'k');
   resetButton.text = "Reset";
   resetButton.color = color(255, 255, 255, 200);
 
-  nextButton = new Sprite(width-40, 50, 65, 25, 'k');
-  nextButton.textSize = 20;
+  nextButton = new Sprite(width-40, 50, 70, 25, 'k');
   nextButton.text = "Next";
   nextButton.color = color(255, 255, 255, 200);
 
-  previousButton = new Sprite(width-40, 80, 65, 25, 'k');
-  previousButton.textSize = 20;
+  previousButton = new Sprite(width-40, 80, 70, 25, 'k');
   previousButton.text = "Previous";
   previousButton.color = color(255, 255, 255, 200);
   
 
-  solutionButton = new Sprite(40, height-20, 65,25, 'k');
-  solutionButton.textSize = 20;
+  solutionButton = new Sprite(40, height-20, 75,25, 'k');
   solutionButton.text = "Solution";
   solutionButton.color = color(255, 255, 255, 200);  
 
@@ -493,9 +488,7 @@ function addTranslationHandle(sprite) {
   {
     if (success) 
       {
-        textFont(ChalkboyFont);
-        textSize(30);
-        textAlign(CENTER);
+        setFont(20);
         text('Level ' + level + ' of 6 Completed!', canvas.w/2, 40);
         if (!successSound.isPlaying() && !successHasPlayed) 
           {
@@ -533,7 +526,7 @@ function showEducation() {
   resetButton.visible = false;
   homeButton.visible = true;
   solutionButton.visible = false; // Hide solution button in educational state
-  setFont(30);
+  setFont(25);
 }
 
 function handleLevelTransition() {

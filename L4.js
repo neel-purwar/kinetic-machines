@@ -63,9 +63,9 @@ function playL4()
 
   if (!showEducationalImage)
   {
-    setFont();
-    text('Use all four arrow keys to', width/2, height-65);
-    text('help red ball go inside the basket!', width/2, height-40);
+    setFont(18);
+    text('Use left and right arrow keys to move fulcrum and', width/2, height-60);
+    text('use up and down keys to change size of the box!', width/2, height-35);
   }
  
  if (solutionButton.mouse.pressing())
@@ -80,9 +80,9 @@ function drawSolutionL4()
 {  
     block.position.x = 106;
     block.position.y = 79.5;
-    block.width = 70;
-    block.height = 70;
-    fulcrum.position.x = 250;
+    block.width = 100;
+    block.height = 100;
+    fulcrum.position.x = 260;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -99,12 +99,12 @@ function createSpritesL4()
     block.color = color(255,0,0,200);
     block.stroke = color(255,0,0,200);
       
-    fulcrum = new Sprite(width/2-100, height-115, 25, 'triangle');
+    fulcrum = new Sprite(width/2-100, height-117, 25, 'triangle');
     fulcrum.color = color(244, 203, 39);
     fulcrum.collider = 'k'
     addTranslationHandle(fulcrum);
 
-    bar = new Sprite(width/2, height-135, 400, 10, 'k');
+    bar = new Sprite(width/2, height-137, 400, 10, 'k');
     bar.color = color(244, 203, 39);
   
    	basket = new Sprite(width/2+230, height/2-45, [60, 90, 40, -90, 60, -90], 's');

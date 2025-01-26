@@ -37,9 +37,9 @@ function playL3()
 
   if (!showEducationalImage)
   {
-    setFont();
-    text('Position the black bouncy bar to ', width/2, height-65);
-    text('help ball go inside the basket!', width/2, height-40);
+    setFont(18);
+    text('Position the black bouncy bar to ', width/2, height-60);
+    text('help ball go inside the basket!', width/2, height-35);
   }
 
  if (solutionButton.mouse.pressing())
@@ -73,7 +73,7 @@ function createSpritesL3()
   bar = new Sprite(width/2,40,100,20,'k');
   addRotationHandle(bar,bar.halfWidth + 10);
   addTranslationHandle(bar);
-  bar.bounciness = 1;
+  bar.bounciness = .75;
   bar.drag = 10;
   bar.rotationDrag = 5;
   bar.color = color(3, 3, 3, 200);

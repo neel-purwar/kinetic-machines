@@ -39,7 +39,7 @@ function playL0()
 
   if (gravityActivated)
   {
-    world.gravity.y = 100;  
+    world.gravity.y = 10;  
     ball1.collider = 'd';
     ball2.collider = 'd';
     ball3.collider = 'd';
@@ -55,8 +55,8 @@ if (!showEducationalImage)
 {
   // fill(color(252, 38, 0));
   setFont(18);
-  text('Practice positioning objects below the balls to see bounce effect.', width/2, height-65);
-  text('Use up and down keys to change the size of the square box.', width/2, height-40);
+  text('Practice positioning objects below the ', width/2, height-60);
+  text('balls to see bounce effect.', width/2, height-35);
 }
 
   if (solutionButton.mouse.pressing())
